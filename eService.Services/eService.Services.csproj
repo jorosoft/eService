@@ -40,7 +40,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contracts\IService.cs" />
+    <Compile Include="DataServices\AddressService.cs" />
+    <Compile Include="DataServices\CityService.cs" />
+    <Compile Include="DataServices\ClientService.cs" />
+    <Compile Include="DataServices\EmployeeService.cs" />
+    <Compile Include="DataServices\OrderService.cs" />
+    <Compile Include="DataServices\ServiceTypeService.cs" />
+    <Compile Include="DataServices\StatusService.cs" />
+    <Compile Include="DataServices\StreetService.cs" />
+    <Compile Include="DataServices\SupplierService.cs" />
+    <Compile Include="DataServices\UserService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\eService.Data.Models\eService.Data.Models.csproj">
+      <Project>{3AA1F4A8-4464-4798-9967-23D6023889B5}</Project>
+      <Name>eService.Data.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\eService.Data\eService.Data.csproj">
+      <Project>{1B98EA11-56D6-4720-8F11-5F7BE8750076}</Project>
+      <Name>eService.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

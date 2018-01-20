@@ -303,6 +303,10 @@
       <Project>{1B98EA11-56D6-4720-8F11-5F7BE8750076}</Project>
       <Name>eService.Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\eService.Services\eService.Services.csproj">
+      <Project>{EF5C99BF-5E13-425A-B915-F1154D6E5AF2}</Project>
+      <Name>eService.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -12,6 +12,11 @@ namespace eService.Web.App_Start
     using Ninject.Extensions.Conventions;
     using Ninject.Web.Common;
     using Ninject.Web.Common.WebHost;
+    using Services.Contracts;
+    using Data;
+    using System.Data.Entity;
+    using Data.Contracts;
+    using Data.Repositories;
 
     public static class NinjectWebCommon 
     {
@@ -70,6 +75,16 @@ namespace eService.Web.App_Start
                  .BindDefaultInterface();
             });
 
+            kernel.Bind(x =>
+            {
+                x.FromAssemblyContaining(typeof(IService))
+                 .SelectAllClasses()
+                 .BindDefaultInterface();
+            });
+
+            kernel.Bind(typeof(DbContext), typeof(MsSqlContext)).To<MsSqlContext>().InRequestScope();
+            kernel.Bind(typeof(IEfRepository<>)).To(typeof(EfRepository<>));
+            kernel.Bind<ISaveContext>().To<SaveContext>();
         }        
     }
 }
