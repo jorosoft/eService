@@ -63,6 +63,10 @@
     <Compile Include="Migrations\201801201632172_Initial.Designer.cs">
       <DependentUpon>201801201632172_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201801201859060_Update DB Models.cs" />
+    <Compile Include="Migrations\201801201859060_Update DB Models.Designer.cs">
+      <DependentUpon>201801201859060_Update DB Models.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MsSqlContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -76,6 +80,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201801201632172_Initial.resx">
       <DependentUpon>201801201632172_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801201859060_Update DB Models.resx">
+      <DependentUpon>201801201859060_Update DB Models.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
