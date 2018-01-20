@@ -59,9 +59,9 @@
   <ItemGroup>
     <Compile Include="Contracts\IEfRepository.cs" />
     <Compile Include="Contracts\ISaveContext.cs" />
-    <Compile Include="Migrations\201801201355568_Initial.cs" />
-    <Compile Include="Migrations\201801201355568_Initial.Designer.cs">
-      <DependentUpon>201801201355568_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\201801201632172_Initial.cs" />
+    <Compile Include="Migrations\201801201632172_Initial.Designer.cs">
+      <DependentUpon>201801201632172_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MsSqlContext.cs" />
@@ -73,17 +73,16 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201801201632172_Initial.resx">
+      <DependentUpon>201801201632172_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\eService.Data.Models\eService.Data.Models.csproj">
       <Project>{3AA1F4A8-4464-4798-9967-23D6023889B5}</Project>
       <Name>eService.Data.Models</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201801201355568_Initial.resx">
-      <DependentUpon>201801201355568_Initial.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

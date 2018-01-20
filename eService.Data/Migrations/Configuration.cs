@@ -11,8 +11,7 @@ namespace eService.Data.Migrations
     public sealed class Configuration : DbMigrationsConfiguration<MsSqlContext>
     {
         private const string AdministratorUserName = "admin";
-        private const string AdministratorEmail = "admin@eservice.com";
-        private const string AdministratorPassword = "admina";
+        private const string AdministratorPassword = "123456";
 
         public Configuration()
         {
@@ -43,8 +42,8 @@ namespace eService.Data.Migrations
                 var userManager = new UserManager<User>(userStore);
                 var user = new User
                 {
-                    UserName = AdministratorEmail,
-                    Email = AdministratorEmail,
+                    UserName = AdministratorUserName,
+                    Email = AdministratorUserName + "@eservice.com",
                     EmailConfirmed = true
                 };
 
