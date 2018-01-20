@@ -28,5 +28,10 @@ namespace eService.Data
         public IDbSet<Supplier> Suppliers { get; set; }
 
         public IDbSet<Status> Statuses { get; set; }
-    }
+
+        public static MsSqlContext Create()
+        {
+            return new MsSqlContext();
+        }
+    }   
 }

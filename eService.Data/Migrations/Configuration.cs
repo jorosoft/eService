@@ -10,7 +10,8 @@ namespace eService.Data.Migrations
 
     public sealed class Configuration : DbMigrationsConfiguration<MsSqlContext>
     {
-        private const string AdministratorUserName = "admin@eservice.com";
+        private const string AdministratorUserName = "admin";
+        private const string AdministratorEmail = "admin@eservice.com";
         private const string AdministratorPassword = "admina";
 
         public Configuration()
@@ -29,18 +30,21 @@ namespace eService.Data.Migrations
             if (!context.Roles.Any())
             {
                 var roleName = "Admin";
+                var secondRoleName = "User";
 
                 var roleStore = new RoleStore<IdentityRole>(context);
                 var roleManager = new RoleManager<IdentityRole>(roleStore);
                 var role = new IdentityRole { Name = roleName };
                 roleManager.Create(role);
-                
+                var secondRole = new IdentityRole { Name = secondRoleName };
+                roleManager.Create(secondRole);
+
                 var userStore = new UserStore<User>(context);
                 var userManager = new UserManager<User>(userStore);
                 var user = new User
                 {
-                    UserName = AdministratorUserName,
-                    Email = AdministratorUserName,
+                    UserName = AdministratorEmail,
+                    Email = AdministratorEmail,
                     EmailConfirmed = true
                 };
 
