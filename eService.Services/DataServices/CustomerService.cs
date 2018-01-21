@@ -5,48 +5,48 @@ using eService.Services.Contracts;
 
 namespace eService.Services.DataServices
 {
-    public class ClientService : IClientService
+    public class CustomerService : ICustomerService
     {
-        private readonly IEfRepository<Client> clientRepo;
+        private readonly IEfRepository<Customer> clientRepo;
         private readonly ISaveContext context;
 
-        public ClientService(IEfRepository<Client> clientRepo, ISaveContext context)
+        public CustomerService(IEfRepository<Customer> clientRepo, ISaveContext context)
         {
             this.clientRepo = clientRepo;
             this.context = context;
         }
 
-        public IQueryable<Client> GetAll()
+        public IQueryable<Customer> GetAll()
         {
             return this.clientRepo.All;
         }
 
-        public IQueryable<Client> GetAllAndDeleted()
+        public IQueryable<Customer> GetAllAndDeleted()
         {
             return this.clientRepo.AllAndDeleted;
         }
 
-        public void Add(Client client)
+        public void Add(Customer client)
         {
             this.clientRepo.Add(client);
             this.context.Commit();
         }
 
-        public void Update(Client client)
+        public void Update(Customer client)
         {
             this.clientRepo.Update(client);
             this.context.Commit();
         }
 
-        public void Delete(Client client)
+        public void Delete(Customer client)
         {
             this.clientRepo.Delete(client);
             this.context.Commit();
         }
 
-        public Client GetDbModel()
+        public Customer GetDbModel()
         {
-            return new Client();
+            return new Customer();
         }
     }
 }

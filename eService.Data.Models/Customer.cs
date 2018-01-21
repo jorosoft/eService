@@ -4,7 +4,7 @@ using eService.Data.Models.Abstractions;
 
 namespace eService.Data.Models
 {
-    public class Client : DBEntity
+    public class Customer : DBEntity
     {
         [Required]
         [MinLength(5)]

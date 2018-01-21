@@ -56,7 +56,7 @@ namespace eService.Data.Migrations
         private void SeedData(MsSqlContext context)
         {
             var cities = SeedList.Cities
-                .Select(x => new City
+                .Select(x => new Town
                 {
                     Name = x.ToUpper()
                 })

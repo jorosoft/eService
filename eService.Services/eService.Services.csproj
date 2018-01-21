@@ -41,8 +41,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contracts\IAddressService.cs" />
-    <Compile Include="Contracts\ICityService.cs" />
-    <Compile Include="Contracts\IClientService.cs" />
+    <Compile Include="Contracts\ITownService.cs" />
+    <Compile Include="Contracts\ICustomerService.cs" />
     <Compile Include="Contracts\IEmployeeService.cs" />
     <Compile Include="Contracts\IOrderService.cs" />
     <Compile Include="Contracts\IService.cs" />
@@ -52,8 +52,8 @@
     <Compile Include="Contracts\ISupplierService.cs" />
     <Compile Include="Contracts\IUserService.cs" />
     <Compile Include="DataServices\AddressService.cs" />
-    <Compile Include="DataServices\CityService.cs" />
-    <Compile Include="DataServices\ClientService.cs" />
+    <Compile Include="DataServices\TownService.cs" />
+    <Compile Include="DataServices\CustomerService.cs" />
     <Compile Include="DataServices\EmployeeService.cs" />
     <Compile Include="DataServices\OrderService.cs" />
     <Compile Include="DataServices\ServiceTypeService.cs" />

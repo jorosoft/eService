@@ -5,7 +5,7 @@ using eService.Data.Models.Abstractions;
 
 namespace eService.Data.Models
 {
-    public class City : DBEntity
+    public class Town : DBEntity
     {
         [Required]
         [Index(IsUnique = true)]
