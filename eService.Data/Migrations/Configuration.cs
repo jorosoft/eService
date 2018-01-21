@@ -55,14 +55,14 @@ namespace eService.Data.Migrations
 
         private void SeedData(MsSqlContext context)
         {
-            var cities = SeedList.Cities
+            var towns = SeedList.Towns
                 .Select(x => new Town
                 {
                     Name = x.ToUpper()
                 })
                 .ToArray();
 
-            context.Cities.AddOrUpdate(x => x.Name, cities);
+            context.Towns.AddOrUpdate(x => x.Name, towns);
             context.ServiceTypes.AddOrUpdate(
                 x => x.Name, 
                 new ServiceType { Name = "Гаранционен" },
@@ -71,6 +71,7 @@ namespace eService.Data.Migrations
             context.Statuses.AddOrUpdate(
                 x => x.Name,
                 new Status { Name = "Приет" },
+                new Status { Name = "Изпратен към сервиз на доставчика" },
                 new Status { Name = "Изпратен към външен сервиз" },
                 new Status { Name = "Отказана гаранция" },
                 new Status { Name = "Готов" }

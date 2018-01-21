@@ -72,6 +72,14 @@
     <Compile Include="Migrations\201801211109229_Update DB.Designer.cs">
       <DependentUpon>201801211109229_Update DB.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201801211426340_Renamed fields.cs" />
+    <Compile Include="Migrations\201801211426340_Renamed fields.Designer.cs">
+      <DependentUpon>201801211426340_Renamed fields.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801211435214_Refactored restrictions.cs" />
+    <Compile Include="Migrations\201801211435214_Refactored restrictions.Designer.cs">
+      <DependentUpon>201801211435214_Refactored restrictions.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MsSqlContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -91,6 +99,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201801211109229_Update DB.resx">
       <DependentUpon>201801211109229_Update DB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801211426340_Renamed fields.resx">
+      <DependentUpon>201801211426340_Renamed fields.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801211435214_Refactored restrictions.resx">
+      <DependentUpon>201801211435214_Refactored restrictions.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

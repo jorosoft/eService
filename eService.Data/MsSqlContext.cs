@@ -11,9 +11,9 @@ namespace eService.Data
         {
         }
 
-        public IDbSet<Town> Cities { get; set; }
+        public IDbSet<Town> Towns { get; set; }
 
-        public IDbSet<Customer> Clients { get; set; }
+        public IDbSet<Customer> Customers { get; set; }
 
         public IDbSet<Employee> Employees { get; set; }
 

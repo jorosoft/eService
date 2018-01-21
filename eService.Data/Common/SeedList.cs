@@ -2,7 +2,7 @@
 {
     public static class SeedList
     {
-        public static string[] Cities =
+        public static string[] Towns =
         {
             "Айтос",
             "Алфатар",
