@@ -57,6 +57,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\SeedList.cs" />
     <Compile Include="Contracts\IEfRepository.cs" />
     <Compile Include="Contracts\ISaveContext.cs" />
     <Compile Include="Migrations\201801201632172_Initial.cs" />
@@ -66,6 +67,10 @@
     <Compile Include="Migrations\201801201859060_Update DB Models.cs" />
     <Compile Include="Migrations\201801201859060_Update DB Models.Designer.cs">
       <DependentUpon>201801201859060_Update DB Models.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801211109229_Update DB.cs" />
+    <Compile Include="Migrations\201801211109229_Update DB.Designer.cs">
+      <DependentUpon>201801211109229_Update DB.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MsSqlContext.cs" />
@@ -83,6 +88,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201801201859060_Update DB Models.resx">
       <DependentUpon>201801201859060_Update DB Models.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801211109229_Update DB.resx">
+      <DependentUpon>201801211109229_Update DB.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

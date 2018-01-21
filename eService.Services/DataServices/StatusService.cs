@@ -1,10 +1,11 @@
 ﻿using System.Linq;
 using eService.Data.Contracts;
 using eService.Data.Models;
+using eService.Services.Contracts;
 
 namespace eService.Services.DataServices
 {
-    public class StatusService
+    public class StatusService : IStatusService
     {
         private readonly IEfRepository<Status> statusRepo;
         private readonly ISaveContext context;

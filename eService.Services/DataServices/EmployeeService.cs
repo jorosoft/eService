@@ -1,10 +1,11 @@
 ﻿using System.Linq;
 using eService.Data.Contracts;
 using eService.Data.Models;
+using eService.Services.Contracts;
 
 namespace eService.Services.DataServices
 {
-    public class EmployeeService
+    public class EmployeeService : IEmployeeService
     {
         private readonly IEfRepository<Employee> employeeRepo;
         private readonly ISaveContext context;

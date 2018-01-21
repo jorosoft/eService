@@ -1,12 +1,12 @@
-using System;
 using System.Data.Entity.Migrations;
 using System.Linq;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using eService.Data.Models;
+using eService.Data.Common;
 
 namespace eService.Data.Migrations
-{   
+{
 
     public sealed class Configuration : DbMigrationsConfiguration<MsSqlContext>
     {
@@ -22,6 +22,7 @@ namespace eService.Data.Migrations
         protected override void Seed(MsSqlContext context)
         {
             this.SeedAdmin(context);
+            this.SeedData(context);
         }
 
         private void SeedAdmin(MsSqlContext context)
@@ -50,6 +51,30 @@ namespace eService.Data.Migrations
                 userManager.Create(user, AdministratorPassword);
                 userManager.AddToRole(user.Id, roleName);
             }
+        }
+
+        private void SeedData(MsSqlContext context)
+        {
+            var cities = SeedList.Cities
+                .Select(x => new City
+                {
+                    Name = x.ToUpper()
+                })
+                .ToArray();
+
+            context.Cities.AddOrUpdate(x => x.Name, cities);
+            context.ServiceTypes.AddOrUpdate(
+                x => x.Name, 
+                new ServiceType { Name = "Гаранционен" },
+                new ServiceType { Name = "Извънгаранционен" } 
+                );
+            context.Statuses.AddOrUpdate(
+                x => x.Name,
+                new Status { Name = "Приет" },
+                new Status { Name = "Изпратен към външен сервиз" },
+                new Status { Name = "Отказана гаранция" },
+                new Status { Name = "Готов" }
+                );
         }
     }
 }

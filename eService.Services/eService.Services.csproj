@@ -40,7 +40,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contracts\IAddressService.cs" />
+    <Compile Include="Contracts\ICityService.cs" />
+    <Compile Include="Contracts\IClientService.cs" />
+    <Compile Include="Contracts\IEmployeeService.cs" />
+    <Compile Include="Contracts\IOrderService.cs" />
     <Compile Include="Contracts\IService.cs" />
+    <Compile Include="Contracts\IServicetypeService.cs" />
+    <Compile Include="Contracts\IStatusService.cs" />
+    <Compile Include="Contracts\IStreetService.cs" />
+    <Compile Include="Contracts\ISupplierService.cs" />
+    <Compile Include="Contracts\IUserService.cs" />
     <Compile Include="DataServices\AddressService.cs" />
     <Compile Include="DataServices\CityService.cs" />
     <Compile Include="DataServices\ClientService.cs" />

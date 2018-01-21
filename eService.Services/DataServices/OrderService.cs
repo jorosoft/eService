@@ -1,10 +1,11 @@
 ﻿using System.Linq;
 using eService.Data.Contracts;
 using eService.Data.Models;
+using eService.Services.Contracts;
 
 namespace eService.Services.DataServices
 {
-    public class OrderService
+    public class OrderService : IOrderService
     {
         private readonly IEfRepository<Order> orderRepo;
         private readonly ISaveContext context;

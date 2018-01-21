@@ -1,10 +1,11 @@
 ﻿using System.Linq;
 using eService.Data.Contracts;
 using eService.Data.Models;
+using eService.Services.Contracts;
 
 namespace eService.Services.DataServices
 {
-    public class AddressService
+    public class AddressService : IAddressService
     {
         private readonly IEfRepository<Address> addressRepo;
         private readonly ISaveContext context;

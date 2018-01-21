@@ -241,3 +241,4 @@ bower_components/
 coverage/
 /eService.Tests/CodeCoverage/results.xml
 /eService.Tests/CodeCoverage/TestResult.xml
+eService.Data/Migrations/
