@@ -59,6 +59,7 @@
   <ItemGroup>
     <Compile Include="Abstractions\DBEntity.cs" />
     <Compile Include="Address.cs" />
+    <Compile Include="History.cs" />
     <Compile Include="Town.cs" />
     <Compile Include="Customer.cs" />
     <Compile Include="Contracts\IDeletable.cs" />

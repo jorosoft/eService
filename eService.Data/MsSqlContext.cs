@@ -29,6 +29,8 @@ namespace eService.Data
 
         public IDbSet<Status> Statuses { get; set; }
 
+        public IDbSet<History> History { get; set; }
+
         public static MsSqlContext Create()
         {
             return new MsSqlContext();

@@ -8,6 +8,11 @@ namespace eService.Data.Models
     {
         [Required]
         [Index(IsUnique = true)]
+        [Range(0, 10)]
+        public int Code { get; set; }
+
+        [Required]
+        [Index(IsUnique = true)]
         [MinLength(3)]
         [MaxLength(20)]
         public string Name { get; set; }

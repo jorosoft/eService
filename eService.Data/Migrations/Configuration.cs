@@ -65,16 +65,16 @@ namespace eService.Data.Migrations
             context.Towns.AddOrUpdate(x => x.Name, towns);
             context.ServiceTypes.AddOrUpdate(
                 x => x.Name, 
-                new ServiceType { Name = "Гаранционен" },
-                new ServiceType { Name = "Извънгаранционен" } 
+                new ServiceType { Code = 0, Name = "Гаранционен" },
+                new ServiceType { Code = 1, Name = "Извънгаранционен" } 
                 );
             context.Statuses.AddOrUpdate(
                 x => x.Name,
-                new Status { Name = "Приет" },
-                new Status { Name = "Изпратен към сервиз на доставчика" },
-                new Status { Name = "Изпратен към външен сервиз" },
-                new Status { Name = "Отказана гаранция" },
-                new Status { Name = "Готов" }
+                new Status { Level = 0, Name = "Приет" },
+                new Status { Level = 1, Name = "Изпратен към външен сервиз" },
+                new Status { Level = 9, Name = "Отказана гаранция" },
+                new Status { Level = 9, Name = "Готов" },
+                new Status { Level = 10, Name = "Върнат на клиента" }
                 );
         }
     }

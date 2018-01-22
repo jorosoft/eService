@@ -11,7 +11,7 @@ namespace eService.Data.Models
 
         [Required]
         public DateTime Date { get; set; }
-
+        
         public int WarrantyCardNumber { get; set; }
 
         public DateTime WarrantyCardDate { get; set; }
@@ -19,6 +19,11 @@ namespace eService.Data.Models
         [Required]
         [MinLength(2)]
         public string Article { get; set; }
+
+        public string SerialNumber { get; set; }
+
+        [Range(0, 10)]
+        public int Priority { get; set; }
 
         [Required]
         [MinLength(2)]

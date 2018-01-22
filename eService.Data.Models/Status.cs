@@ -7,6 +7,10 @@ namespace eService.Data.Models
     public class Status : DBEntity
     {
         [Required]
+        [Range(0, 10)]
+        public int Level { get; set; }
+
+        [Required]
         [Index(IsUnique = true)]
         [MinLength(3)]
         [MaxLength(35)]
