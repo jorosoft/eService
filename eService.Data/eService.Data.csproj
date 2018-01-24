@@ -60,41 +60,13 @@
     <Compile Include="Common\SeedList.cs" />
     <Compile Include="Contracts\IEfRepository.cs" />
     <Compile Include="Contracts\ISaveContext.cs" />
-    <Compile Include="Migrations\201801201632172_Initial.cs" />
-    <Compile Include="Migrations\201801201632172_Initial.Designer.cs">
-      <DependentUpon>201801201632172_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\201801242040320_Initial.cs" />
+    <Compile Include="Migrations\201801242040320_Initial.Designer.cs">
+      <DependentUpon>201801242040320_Initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201801201859060_Update DB Models.cs" />
-    <Compile Include="Migrations\201801201859060_Update DB Models.Designer.cs">
-      <DependentUpon>201801201859060_Update DB Models.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201801211109229_Update DB.cs" />
-    <Compile Include="Migrations\201801211109229_Update DB.Designer.cs">
-      <DependentUpon>201801211109229_Update DB.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201801211426340_Renamed fields.cs" />
-    <Compile Include="Migrations\201801211426340_Renamed fields.Designer.cs">
-      <DependentUpon>201801211426340_Renamed fields.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201801211435214_Refactored restrictions.cs" />
-    <Compile Include="Migrations\201801211435214_Refactored restrictions.Designer.cs">
-      <DependentUpon>201801211435214_Refactored restrictions.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201801221932245_Refactor DB Models.cs" />
-    <Compile Include="Migrations\201801221932245_Refactor DB Models.Designer.cs">
-      <DependentUpon>201801221932245_Refactor DB Models.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201801221948598_Add History table.cs" />
-    <Compile Include="Migrations\201801221948598_Add History table.Designer.cs">
-      <DependentUpon>201801221948598_Add History table.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201801241830213_Fixed some field names.cs" />
-    <Compile Include="Migrations\201801241830213_Fixed some field names.Designer.cs">
-      <DependentUpon>201801241830213_Fixed some field names.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201801241924168_Update database.cs" />
-    <Compile Include="Migrations\201801241924168_Update database.Designer.cs">
-      <DependentUpon>201801241924168_Update database.cs</DependentUpon>
+    <Compile Include="Migrations\201801242059086_Refactor DB limitations.cs" />
+    <Compile Include="Migrations\201801242059086_Refactor DB limitations.Designer.cs">
+      <DependentUpon>201801242059086_Refactor DB limitations.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MsSqlContext.cs" />
@@ -107,39 +79,18 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201801201632172_Initial.resx">
-      <DependentUpon>201801201632172_Initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201801201859060_Update DB Models.resx">
-      <DependentUpon>201801201859060_Update DB Models.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201801211109229_Update DB.resx">
-      <DependentUpon>201801211109229_Update DB.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201801211426340_Renamed fields.resx">
-      <DependentUpon>201801211426340_Renamed fields.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201801211435214_Refactored restrictions.resx">
-      <DependentUpon>201801211435214_Refactored restrictions.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201801221932245_Refactor DB Models.resx">
-      <DependentUpon>201801221932245_Refactor DB Models.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201801221948598_Add History table.resx">
-      <DependentUpon>201801221948598_Add History table.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201801241830213_Fixed some field names.resx">
-      <DependentUpon>201801241830213_Fixed some field names.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201801241924168_Update database.resx">
-      <DependentUpon>201801241924168_Update database.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\eService.Data.Models\eService.Data.Models.csproj">
       <Project>{3AA1F4A8-4464-4798-9967-23D6023889B5}</Project>
       <Name>eService.Data.Models</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201801242040320_Initial.resx">
+      <DependentUpon>201801242040320_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801242059086_Refactor DB limitations.resx">
+      <DependentUpon>201801242059086_Refactor DB limitations.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using eService.Data.Models.Abstractions;
 
 namespace eService.Data.Models
@@ -7,6 +8,7 @@ namespace eService.Data.Models
     public class Order : DBEntity
     {
         [Required]
+        [Index(IsUnique = true)]
         public int Number { get; set; }
 
         [Required]
@@ -22,8 +24,7 @@ namespace eService.Data.Models
 
         public string SerialNumber { get; set; }
 
-        [Range(0, 10)]
-        public int Priority { get; set; }
+        public bool Priority { get; set; }
 
         [Required]
         [MinLength(2)]

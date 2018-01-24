@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using eService.Services.Contracts;
 using eService.Web.ViewModels.Orders;
@@ -12,10 +10,52 @@ namespace eService.Web.Controllers
     {
         private const int FinishedOrderMinWorkwlowLevel = 9;
         private readonly IOrderService orderService;
+        private readonly IHistoryService historyService;
 
-        public OrdersController(IOrderService orderService)
+        public OrdersController(IOrderService orderService, IHistoryService historyService)
         {
             this.orderService = orderService;
+            this.historyService = historyService;
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Search(int number)
+        {
+            if (!ModelState.IsValid)
+            {
+                return this.View(number);
+            }
+
+            var viewModel = this.orderService
+                .GetAll()
+                .Where(x => x.Number == number)
+                .Select(x => new OrderHistoryViewModel
+                {
+                    Id = x.Id,
+                    Number = x.Number,
+                    Article = x.Article,
+                    SerialNumber = x.SerialNumber
+                })
+                .SingleOrDefault();
+
+            if (viewModel == null)
+            {
+                // TODO
+            }
+
+            viewModel.History = this.historyService
+                .GetAll()
+                .Where(x => x.Order.Id == viewModel.Id)
+                .OrderBy(x => x.Date)
+                .Select(x => new HistoryViewModel
+                {
+                    Date = x.Date,
+                    Status = x.Status.Name
+                })
+                .ToList();
+           
+            return this.View(viewModel);
         }
 
         public ActionResult All()

@@ -154,6 +154,7 @@ namespace eService.Web.Controllers
             {
                 var user = new User { UserName = model.UserName, Email = model.UserName + "@eservice.com" };
                 var result = await UserManager.CreateAsync(user, model.Password);
+                this.UserManager.AddToRole(user.Id, "User");
                 if (result.Succeeded)
                 {
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);

@@ -16,7 +16,7 @@ namespace eService.Web.ViewModels.Orders
 
         public string SerialNumber { get; set; }
 
-        public int Priority { get; set; }
+        public bool Priority { get; set; }
 
         public string Defect { get; set; }
 
