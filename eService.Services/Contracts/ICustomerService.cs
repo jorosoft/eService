@@ -9,11 +9,11 @@ namespace eService.Services.Contracts
 
         IQueryable<Customer> GetAllAndDeleted();
 
-        void Add(Customer client);
+        void Add(Customer customer);
 
-        void Update(Customer client);
+        void Update(Customer customer);
 
-        void Delete(Customer client);
+        void Delete(Customer customer);
 
         Customer GetDbModel();
     }

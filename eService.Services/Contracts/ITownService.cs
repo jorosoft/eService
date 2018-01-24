@@ -9,11 +9,11 @@ namespace eService.Services.Contracts
 
         IQueryable<Town> GetAllAndDeleted();
 
-        void Add(Town city);
+        void Add(Town town);
 
-        void Update(Town city);
+        void Update(Town town);
 
-        void Delete(Town city);
+        void Delete(Town town);
 
         Town GetDbModel();
     }

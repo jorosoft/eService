@@ -7,40 +7,40 @@ namespace eService.Services.DataServices
 {
     public class TownService : ITownService
     {
-        private readonly IEfRepository<Town> cityRepo;
+        private readonly IEfRepository<Town> townRepo;
         private readonly ISaveContext context;
 
-        public TownService(IEfRepository<Town> cityRepo, ISaveContext context)
+        public TownService(IEfRepository<Town> townRepo, ISaveContext context)
         {
-            this.cityRepo = cityRepo;
+            this.townRepo = townRepo;
             this.context = context;
         }
 
         public IQueryable<Town> GetAll()
         {
-            return this.cityRepo.All;
+            return this.townRepo.All;
         }
 
         public IQueryable<Town> GetAllAndDeleted()
         {
-            return this.cityRepo.AllAndDeleted;
+            return this.townRepo.AllAndDeleted;
         }
 
-        public void Add(Town city)
+        public void Add(Town town)
         {
-            this.cityRepo.Add(city);
+            this.townRepo.Add(town);
             this.context.Commit();
         }
 
-        public void Update(Town city)
+        public void Update(Town town)
         {
-            this.cityRepo.Update(city);
+            this.townRepo.Update(town);
             this.context.Commit();
         }
 
-        public void Delete(Town city)
+        public void Delete(Town town)
         {
-            this.cityRepo.Delete(city);
+            this.townRepo.Delete(town);
             this.context.Commit();
         }
 

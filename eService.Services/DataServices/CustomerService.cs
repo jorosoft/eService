@@ -7,40 +7,40 @@ namespace eService.Services.DataServices
 {
     public class CustomerService : ICustomerService
     {
-        private readonly IEfRepository<Customer> clientRepo;
+        private readonly IEfRepository<Customer> customerRepo;
         private readonly ISaveContext context;
 
-        public CustomerService(IEfRepository<Customer> clientRepo, ISaveContext context)
+        public CustomerService(IEfRepository<Customer> customerRepo, ISaveContext context)
         {
-            this.clientRepo = clientRepo;
+            this.customerRepo = customerRepo;
             this.context = context;
         }
 
         public IQueryable<Customer> GetAll()
         {
-            return this.clientRepo.All;
+            return this.customerRepo.All;
         }
 
         public IQueryable<Customer> GetAllAndDeleted()
         {
-            return this.clientRepo.AllAndDeleted;
+            return this.customerRepo.AllAndDeleted;
         }
 
-        public void Add(Customer client)
+        public void Add(Customer customer)
         {
-            this.clientRepo.Add(client);
+            this.customerRepo.Add(customer);
             this.context.Commit();
         }
 
-        public void Update(Customer client)
+        public void Update(Customer customer)
         {
-            this.clientRepo.Update(client);
+            this.customerRepo.Update(customer);
             this.context.Commit();
         }
 
-        public void Delete(Customer client)
+        public void Delete(Customer customer)
         {
-            this.clientRepo.Delete(client);
+            this.customerRepo.Delete(customer);
             this.context.Commit();
         }
 
