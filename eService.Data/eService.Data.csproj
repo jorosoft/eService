@@ -88,6 +88,14 @@
     <Compile Include="Migrations\201801221948598_Add History table.Designer.cs">
       <DependentUpon>201801221948598_Add History table.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201801241830213_Fixed some field names.cs" />
+    <Compile Include="Migrations\201801241830213_Fixed some field names.Designer.cs">
+      <DependentUpon>201801241830213_Fixed some field names.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801241924168_Update database.cs" />
+    <Compile Include="Migrations\201801241924168_Update database.Designer.cs">
+      <DependentUpon>201801241924168_Update database.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MsSqlContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -119,6 +127,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201801221948598_Add History table.resx">
       <DependentUpon>201801221948598_Add History table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801241830213_Fixed some field names.resx">
+      <DependentUpon>201801241830213_Fixed some field names.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801241924168_Update database.resx">
+      <DependentUpon>201801241924168_Update database.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -70,11 +70,11 @@ namespace eService.Data.Migrations
                 );
             context.Statuses.AddOrUpdate(
                 x => x.Name,
-                new Status { Level = 0, Name = "Приет" },
-                new Status { Level = 1, Name = "Изпратен към външен сервиз" },
-                new Status { Level = 9, Name = "Отказана гаранция" },
-                new Status { Level = 9, Name = "Готов" },
-                new Status { Level = 10, Name = "Върнат на клиента" }
+                new Status { WorkFlowLevel = 0, Name = "Приет" },
+                new Status { WorkFlowLevel = 1, Name = "Изпратен към външен сервиз" },
+                new Status { WorkFlowLevel = 9, Name = "Отказана гаранция" },
+                new Status { WorkFlowLevel = 9, Name = "Готов" },
+                new Status { WorkFlowLevel = 10, Name = "Върнат на клиента" }
                 );
         }
     }

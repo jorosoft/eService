@@ -8,7 +8,7 @@ namespace eService.Data.Models
     {
         [Required]
         [Range(0, 10)]
-        public int Level { get; set; }
+        public int WorkFlowLevel { get; set; }
 
         [Required]
         [Index(IsUnique = true)]

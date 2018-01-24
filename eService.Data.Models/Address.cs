@@ -5,7 +5,7 @@ namespace eService.Data.Models
 {
     public class Address : DBEntity
     {
-        public virtual Town City { get; set; }
+        public virtual Town Town { get; set; }
 
         public virtual Street Street { get; set; }
 

@@ -35,7 +35,7 @@ namespace eService.Data.Models
 
         public virtual ServiceType ServiceType { get; set; }
 
-        public virtual Customer Client { get; set; }
+        public virtual Customer Customer { get; set; }
 
         public virtual Employee Employee { get; set; }
 
