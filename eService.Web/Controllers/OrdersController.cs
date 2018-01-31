@@ -83,7 +83,7 @@ namespace eService.Web.Controllers
                     CustomerAddressNumber = x.Customer.Address.Number,
                     CustomerAddressFloor = x.Customer.Address.Floor,
                     CustomerAddressApartmentNumber = x.Customer.Address.ApartmentNumber,
-                    EmployeeName = x.Employee.Name,
+                    EmployeeName = x.User.EmployeeName,
                     SupplierName = x.Supplier.Name
                 })
                 .ToList();
@@ -122,7 +122,7 @@ namespace eService.Web.Controllers
                     CustomerAddressNumber = x.Customer.Address.Number,
                     CustomerAddressFloor = x.Customer.Address.Floor,
                     CustomerAddressApartmentNumber = x.Customer.Address.ApartmentNumber,
-                    EmployeeName = x.Employee.Name,
+                    EmployeeName = x.User.EmployeeName,
                     SupplierName = x.Supplier.Name
                 })
                 .ToList();
@@ -168,7 +168,7 @@ namespace eService.Web.Controllers
             entity.Customer.Address.Number = order.CustomerAddressNumber;
             entity.Customer.Address.Floor = order.CustomerAddressFloor;
             entity.Customer.Address.ApartmentNumber = order.CustomerAddressApartmentNumber;
-            entity.Employee.Name  = order.EmployeeName;
+            entity.User.EmployeeName  = order.EmployeeName;
             entity.Supplier.Name = order.SupplierName;
 
             this.orderService.Add(entity);
@@ -209,7 +209,7 @@ namespace eService.Web.Controllers
             entity.Customer.Address.Number = order.CustomerAddressNumber;
             entity.Customer.Address.Floor = order.CustomerAddressFloor;
             entity.Customer.Address.ApartmentNumber = order.CustomerAddressApartmentNumber;
-            entity.Employee.Name = order.EmployeeName;
+            entity.User.EmployeeName = order.EmployeeName;
             entity.Supplier.Name = order.SupplierName;
 
             this.orderService.Update(entity);

@@ -6,16 +6,17 @@ using System.Security.Claims;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity;
 using eService.Data.Models.Contracts;
+using System.ComponentModel.DataAnnotations;
 
 namespace eService.Data.Models
 {
     public class User : IdentityUser, IDeletable
     {
-        private ICollection<Employee> employees;
+        private ICollection<Order> orders;
 
         public User()
         {
-            this.employees = new HashSet<Employee>();
+            this.orders = new HashSet<Order>();
         }
         
         [Index]
@@ -23,16 +24,21 @@ namespace eService.Data.Models
 
         public DateTime? DeletedOn { get; set; }
 
-        public virtual ICollection<Employee> Employees
+        [Required]
+        [MinLength(5)]
+        [MaxLength(20)]
+        public string EmployeeName { get; set; }
+
+        public virtual ICollection<Order> Orders
         {
             get
             {
-                return this.employees;
+                return this.orders;
             }
 
             set
             {
-                this.employees = value;
+                this.orders = value;
             }
         }
 

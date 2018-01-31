@@ -10,7 +10,7 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-default navbar-fixed-top">
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -27,9 +27,11 @@
         </nav>
     </header>
 
-    <div class="container body-content">
-        @RenderBody()
-    </div>
+    <section id="services">
+        <div class="container text-center">
+            @RenderBody()
+        </div>
+    </section>
 
     <footer id="footer" class="footer">
         <div class="container text-center">

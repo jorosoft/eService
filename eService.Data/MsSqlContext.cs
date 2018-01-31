@@ -15,8 +15,6 @@ namespace eService.Data
 
         public IDbSet<Customer> Customers { get; set; }
 
-        public IDbSet<Employee> Employees { get; set; }
-
         public IDbSet<Order> Orders { get; set; }
 
         public IDbSet<ServiceType> ServiceTypes { get; set; }

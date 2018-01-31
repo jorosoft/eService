@@ -44,6 +44,7 @@ namespace eService.Data.Migrations
                 var user = new User
                 {
                     UserName = AdministratorUserName,
+                    EmployeeName = "Администратор",
                     Email = AdministratorUserName + "@eservice.com",
                     EmailConfirmed = true
                 };

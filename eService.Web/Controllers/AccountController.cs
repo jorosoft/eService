@@ -152,7 +152,7 @@ namespace eService.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new User { UserName = model.UserName, Email = model.UserName + "@eservice.com" };
+                var user = new User { UserName = model.UserName, EmployeeName = model.Name, Email = model.UserName + "@eservice.com" };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 this.UserManager.AddToRole(user.Id, "User");
                 if (result.Succeeded)
