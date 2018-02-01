@@ -15,7 +15,7 @@
     GENERAL STYLES
 ==================================================*/
 body {
-          font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size:14px;
 }
 
@@ -139,16 +139,16 @@ min-height:650px;
 .div-trans {
     padding:5px;
     background-color: rgba(0, 255, 41, 0.25);
-min-height: 350px;
-margin-top: 20px;
+min-height: 150px;
+margin-top: 40px;
 color: #fff;
 -webkit-border-radius: 5px;
 -moz-border-radius: 5px;
 border-radius: 5px;
-margin-bottom:30px;
+
 }
     .div-trans .form-control {
-        background-color: rgba(255, 255, 255, 0);
+        background-color: rgb(250, 255, 189);
     }
 
 /*=======================================

@@ -20,16 +20,16 @@ namespace eService.Web.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Search(int number)
+        public ActionResult Search(int serviceNumber)
         {
             if (!ModelState.IsValid)
             {
-                return this.View(number);
+                return this.View(serviceNumber);
             }
 
             var viewModel = this.orderService
                 .GetAll()
-                .Where(x => x.Number == number)
+                .Where(x => x.Number == serviceNumber)
                 .Select(x => new OrderHistoryViewModel
                 {
                     Id = x.Id,

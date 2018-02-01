@@ -1,11 +1,11 @@
-﻿@model eService.Web.ViewModels.Account.RegisterViewModel
+﻿@using eService.Web.ViewModels.Account
+@model RegisterViewModel
 @{
-    ViewBag.Title = "Регистрация";
+    ViewBag.Title = "Регистрация на служител";
 }
 
 <div class="row">
-    <div class="col-md-4 col-sm-4">
-
+    <div class="col-md-4 col-sm-4 col-md-offset-4">
         @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
         {
             <div class="div-trans text-center">
@@ -16,14 +16,14 @@
 
                 <div class="col-md-12 col-sm-12">
                     <div class="form-group">
-                        @Html.TextBoxFor(m => m.UserName, new { @class = "form-control", placeholder = "Потребител" })
+                        @Html.TextBoxFor(m => m.UserName, new { @class = "form-control", placeholder = "Потребителско име" })
                         @Html.ValidationMessageFor(m => m.UserName, "", new { @class = "text-danger" })
                     </div>
                 </div>
 
                 <div class="col-md-12 col-sm-12">
                     <div class="form-group">
-                        @Html.TextBoxFor(m => m.Name, new { @class = "form-control", placeholder = "Лично име на служителя" })
+                        @Html.TextBoxFor(m => m.Name, new { @class = "form-control", placeholder = "Име на служителя" })
                         @Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })
                     </div>
                 </div>

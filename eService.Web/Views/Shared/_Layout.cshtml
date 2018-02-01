@@ -21,7 +21,18 @@
                     @Html.ActionLink("e-Service", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
-                    <li>@Html.Partial("_LoginPartial")</li>
+                    @Html.Partial("_LoginPartial")
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            @Html.ActionLink("Добави", "Add", "Orders", new { area = "" }, null)
+                        </li>
+                        <li>
+                            @Html.ActionLink("Всички поръчки", "All", "Orders", new { area = "" }, null)
+                        </li>
+                        <li>
+                            @Html.ActionLink("Неприключени", "UnFinished", "Orders", new { area = "" }, null)
+                        </li>
+                    </ul>
                 </div>
             </div>
         </nav>
