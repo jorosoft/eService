@@ -1,44 +1,54 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace eService.Web.ViewModels.Orders
 {
     public class OrderViewModel
     {
-        public int Number { get; set; }
+        public int? Number { get; set; }
         
-        public DateTime Date { get; set; }
+        public DateTime? Date { get; set; }
 
-        public int WarrantyCardNumber { get; set; }
+        [Range(0, int.MaxValue)]
+        public int? WarrantyCardNumber { get; set; }
 
-        public DateTime WarrantyCardDate { get; set; }
+        public DateTime? WarrantyCardDate { get; set; }
         
+        [Required(ErrorMessage = "Задължително поле!")]
         public string Article { get; set; }
 
         public string SerialNumber { get; set; }
 
-        public bool Priority { get; set; }
+        public bool IsHighPriority { get; set; }
 
+        [Required(ErrorMessage = "Задължително поле!")]
         public string Defect { get; set; }
 
         public string Info { get; set; }
 
         public string Status { get; set; }
 
-        public string ServiceType { get; set; }
+        public bool IsWarrantyService { get; set; }
 
+        [Required(ErrorMessage = "Задължително поле!")]
         public string CustomerName { get; set; }
 
+        [Required(ErrorMessage = "Задължително поле!")]
         public string CustomerPhoneNumber { get; set; }
 
+        [Required(ErrorMessage = "Задължително поле!")]
         public string CustomerTown { get; set; }
 
         public string CustomerStreet { get; set; }
 
-        public int CustomerAddressNumber { get; set; }
+        public int? CustomerAddressNumber { get; set; }
 
-        public int CustomerAddressFloor { get; set; }
+        [StringLength(1)]
+        public string CustomerAddressEntry { get; set; }
 
-        public int CustomerAddressApartmentNumber { get; set; }
+        public int? CustomerAddressFloor { get; set; }
+
+        public int? CustomerAddressApartmentNumber { get; set; }
 
         public string EmployeeName { get; set; }
 

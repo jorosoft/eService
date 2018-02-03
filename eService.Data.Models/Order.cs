@@ -14,9 +14,9 @@ namespace eService.Data.Models
         [Required]
         public DateTime Date { get; set; }
         
-        public int WarrantyCardNumber { get; set; }
+        public int? WarrantyCardNumber { get; set; }
 
-        public DateTime WarrantyCardDate { get; set; }
+        public DateTime? WarrantyCardDate { get; set; }
 
         [Required]
         [MinLength(2)]
@@ -24,7 +24,9 @@ namespace eService.Data.Models
 
         public string SerialNumber { get; set; }
 
-        public bool Priority { get; set; }
+        public bool IsWarrantyService { get; set; }
+
+        public bool IsHighPriority { get; set; }
 
         [Required]
         [MinLength(2)]
@@ -33,8 +35,6 @@ namespace eService.Data.Models
         public string Info { get; set; }
 
         public virtual Status Status { get; set; }
-
-        public virtual ServiceType ServiceType { get; set; }
 
         public virtual Customer Customer { get; set; }
 

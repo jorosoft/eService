@@ -60,17 +60,9 @@
     <Compile Include="Common\SeedList.cs" />
     <Compile Include="Contracts\IEfRepository.cs" />
     <Compile Include="Contracts\ISaveContext.cs" />
-    <Compile Include="Migrations\201801242040320_Initial.cs" />
-    <Compile Include="Migrations\201801242040320_Initial.Designer.cs">
-      <DependentUpon>201801242040320_Initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201801242059086_Refactor DB limitations.cs" />
-    <Compile Include="Migrations\201801242059086_Refactor DB limitations.Designer.cs">
-      <DependentUpon>201801242059086_Refactor DB limitations.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201801312000026_Remove Employee Table.cs" />
-    <Compile Include="Migrations\201801312000026_Remove Employee Table.Designer.cs">
-      <DependentUpon>201801312000026_Remove Employee Table.cs</DependentUpon>
+    <Compile Include="Migrations\201802031912388_Initial.cs" />
+    <Compile Include="Migrations\201802031912388_Initial.Designer.cs">
+      <DependentUpon>201802031912388_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MsSqlContext.cs" />
@@ -89,14 +81,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201801242040320_Initial.resx">
-      <DependentUpon>201801242040320_Initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201801242059086_Refactor DB limitations.resx">
-      <DependentUpon>201801242059086_Refactor DB limitations.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201801312000026_Remove Employee Table.resx">
-      <DependentUpon>201801312000026_Remove Employee Table.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201802031912388_Initial.resx">
+      <DependentUpon>201802031912388_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

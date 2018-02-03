@@ -71,11 +71,11 @@ namespace eService.Web.Controllers
                     WarrantyCardDate = x.WarrantyCardDate,
                     Article = x.Article,
                     SerialNumber = x.SerialNumber,
-                    Priority = x.Priority,
+                    IsHighPriority = x.IsHighPriority,
                     Defect = x.Defect,
                     Info = x.Info,
                     Status = x.Status.Name,
-                    ServiceType = x.ServiceType.Name,
+                    IsWarrantyService = x.IsWarrantyService,
                     CustomerName = x.Customer.Name,
                     CustomerPhoneNumber = x.Customer.PhoneNumber,
                     CustomerTown = x.Customer.Address.Town.Name,
@@ -110,11 +110,11 @@ namespace eService.Web.Controllers
                     WarrantyCardDate = x.WarrantyCardDate,
                     Article = x.Article,
                     SerialNumber = x.SerialNumber,
-                    Priority = x.Priority,
+                    IsHighPriority = x.IsHighPriority,
                     Defect = x.Defect,
                     Info = x.Info,
                     Status = x.Status.Name,
-                    ServiceType = x.ServiceType.Name,
+                    IsWarrantyService = x.IsWarrantyService,
                     CustomerName = x.Customer.Name,
                     CustomerPhoneNumber = x.Customer.PhoneNumber,
                     CustomerTown = x.Customer.Address.Town.Name,
@@ -136,7 +136,7 @@ namespace eService.Web.Controllers
         }
 
         public ActionResult Add()
-        {
+        {          
             return this.View();
         }
 
@@ -150,17 +150,17 @@ namespace eService.Web.Controllers
             }
 
             var entity = this.orderService.GetDbModel();
-            entity.Number = order.Number;
-            entity.Date = order.Date;
+            //entity.Number = order.Number;
+            //entity.Date = order.Date;
             entity.WarrantyCardNumber = order.WarrantyCardNumber;
             entity.WarrantyCardDate = order.WarrantyCardDate;
             entity.Article = order.Article;
             entity.SerialNumber = order.SerialNumber;
-            entity.Priority = order.Priority;
+            entity.IsHighPriority = order.IsHighPriority;
             entity.Defect = order.Defect;
             entity.Info = order.Info;
             entity.Status.Name = order.Status;
-            entity.ServiceType.Name = order.ServiceType;
+            entity.IsWarrantyService = order.IsWarrantyService;
             entity.Customer.Name = order.CustomerName;
             entity.Customer.PhoneNumber = order.CustomerPhoneNumber;
             entity.Customer.Address.Town.Name = order.CustomerTown;
@@ -191,17 +191,17 @@ namespace eService.Web.Controllers
             }
 
             var entity = this.orderService.GetDbModel();
-            entity.Number = order.Number;
-            entity.Date = order.Date;
+            //entity.Number = order.Number;
+            //entity.Date = order.Date;
             entity.WarrantyCardNumber = order.WarrantyCardNumber;
             entity.WarrantyCardDate = order.WarrantyCardDate;
             entity.Article = order.Article;
             entity.SerialNumber = order.SerialNumber;
-            entity.Priority = order.Priority;
+            entity.IsHighPriority = order.IsHighPriority;
             entity.Defect = order.Defect;
             entity.Info = order.Info;
             entity.Status.Name = order.Status;
-            entity.ServiceType.Name = order.ServiceType;
+            entity.IsWarrantyService = order.IsWarrantyService;
             entity.Customer.Name = order.CustomerName;
             entity.Customer.PhoneNumber = order.CustomerPhoneNumber;
             entity.Customer.Address.Town.Name = order.CustomerTown;

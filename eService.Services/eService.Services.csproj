@@ -46,7 +46,6 @@
     <Compile Include="Contracts\ICustomerService.cs" />
     <Compile Include="Contracts\IOrderService.cs" />
     <Compile Include="Contracts\IService.cs" />
-    <Compile Include="Contracts\IServicetypeService.cs" />
     <Compile Include="Contracts\IStatusService.cs" />
     <Compile Include="Contracts\IStreetService.cs" />
     <Compile Include="Contracts\ISupplierService.cs" />
@@ -56,7 +55,6 @@
     <Compile Include="DataServices\TownService.cs" />
     <Compile Include="DataServices\CustomerService.cs" />
     <Compile Include="DataServices\OrderService.cs" />
-    <Compile Include="DataServices\ServiceTypeService.cs" />
     <Compile Include="DataServices\StatusService.cs" />
     <Compile Include="DataServices\StreetService.cs" />
     <Compile Include="DataServices\SupplierService.cs" />

@@ -5,8 +5,8 @@
 <div class="row">
 
     <div class="col-md-6 col-sm-6 col-md-offset-4">
-        
-        
+
+
         <div class="text-center">
             @using (Html.BeginForm("Search", "Orders", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
             {
@@ -17,20 +17,32 @@
                     </div>
                 </div>
 
-                <div class="col-md-8 col-sm-8">
-                    <div class="form-group">
-                        <input type="number" name="serviceNumber" placeholder="Номер на поръчката" />
-                        <input type="submit" class="btn btn-success" value="Търси" />
-                        @Html.AntiForgeryToken()
-                    </div>
-                </div>                
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-5 col-sm-5">
+                            <form id="custom-search-form" class="form-search form-horizontal pull-right">
+                                <div class="input-append span12">
+                                    <input type="number" class="form-control" name="serviceNumber" placeholder="Номер на поръчката">
 
-                <div class="col-md-8 col-sm-8">
-                    <div class="form-group">
-                        <p>Ако сте служител влезте в системата, за да имате достъп до всички функционалности</p>
-                        <p><a class="btn btn-default" href="./account/login">Вход за служители &raquo;</a></p>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-md-3 col-sm-3">
+                            <input type="submit" class="btn btn-success" value="Търси" />
+                            @Html.AntiForgeryToken()
+                        </div>
                     </div>
                 </div>
+
+                if (!User.Identity.IsAuthenticated)
+                {
+                    <div class="col-md-8 col-sm-8">
+                        <div class="form-group">
+                            <p>Ако сте служител влезте в системата, за да имате достъп до всички функционалности</p>
+                            <p><a class="btn btn-default" href="./account/login">Вход за служители &raquo;</a></p>
+                        </div>
+                    </div>
+                }
             }
         </div>
     </div>

@@ -23,8 +23,15 @@ namespace eService.Web
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/datepicker").Include(
+                      "~/Scripts/jquery.ui.core.js",
+                      "~/Scripts/jquery.ui.datepicker.js",
+                      "~/Scripts/datepicker-bg.js",
+                      "~/Scripts/datepicker-options.js"));
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
+                      "~/Content/jquery-ui.css",
                       "~/Content/site.css"));
         }
     }

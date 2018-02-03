@@ -10,12 +10,15 @@ namespace eService.Data.Models
         public virtual Street Street { get; set; }
 
         [Range(0, 1000)]
-        public int Number { get; set; }
+        public int? Number { get; set; }
+
+        [StringLength(1)]
+        public string Entry { get; set; }
 
         [Range(0, 20)]
-        public int Floor { get; set; }
+        public int? Floor { get; set; }
 
         [Range(0, 1000)]
-        public int ApartmentNumber { get; set; }
+        public int? ApartmentNumber { get; set; }
     }
 }

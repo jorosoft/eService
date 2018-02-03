@@ -17,8 +17,6 @@ namespace eService.Data
 
         public IDbSet<Order> Orders { get; set; }
 
-        public IDbSet<ServiceType> ServiceTypes { get; set; }
-
         public IDbSet<Street> Streets { get; set; }
 
         public IDbSet<Address> Addresses { get; set; }

@@ -64,11 +64,7 @@ namespace eService.Data.Migrations
                 .ToArray();
 
             context.Towns.AddOrUpdate(x => x.Name, towns);
-            context.ServiceTypes.AddOrUpdate(
-                x => x.Name, 
-                new ServiceType { Code = 0, Name = "Гаранционен" },
-                new ServiceType { Code = 1, Name = "Извънгаранционен" } 
-                );
+            
             context.Statuses.AddOrUpdate(
                 x => x.Name,
                 new Status { WorkFlowLevel = 0, Name = "Приет" },
