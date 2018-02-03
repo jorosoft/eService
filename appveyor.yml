@@ -11,7 +11,7 @@ build:
   verbosity: minimal
 environment:
   COVERALLS_REPO_TOKEN:
-    secure: mirGrC2DCNg61GyTlDipue7T0uT9yUQ8TESyWVJBbwdB5jLwBpdpQP19joe/d7Kb
+    secure: x1xY4fArW8bWp3surgPru+HO1o7EF3DcAfGwZpU5G/2TAtS3G5KRSAGpbkMKE/gR
 after_test: 
   - packages\OpenCover.4.6.519\tools\OpenCover.Console.exe -register:user -filter:"+[eService*]*  -[eService.Data*]*" -target:"packages\NUnit.ConsoleRunner.3.8.0\tools\nunit3-console.exe" -targetargs:"/domain:single eService.Tests\bin\Debug\eService.Tests.dll" -output:cover.xml
   - packages\coveralls.io.1.4.2\tools\coveralls.net.exe --opencover cover.xml -r %COVERALLS_REPO_TOKEN%
