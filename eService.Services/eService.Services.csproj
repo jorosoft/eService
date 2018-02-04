@@ -41,6 +41,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contracts\IAddressService.cs" />
+    <Compile Include="Contracts\IDataServices.cs" />
+    <Compile Include="Contracts\IDateService.cs" />
     <Compile Include="Contracts\IHistoryService.cs" />
     <Compile Include="Contracts\ITownService.cs" />
     <Compile Include="Contracts\ICustomerService.cs" />
@@ -59,6 +61,7 @@
     <Compile Include="DataServices\StreetService.cs" />
     <Compile Include="DataServices\SupplierService.cs" />
     <Compile Include="DataServices\UserService.cs" />
+    <Compile Include="DateService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

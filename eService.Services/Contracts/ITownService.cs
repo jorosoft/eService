@@ -15,6 +15,6 @@ namespace eService.Services.Contracts
 
         void Delete(Town town);
 
-        Town GetDbModel();
+        Town GetDbModel(string name);
     }
 }

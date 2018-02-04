@@ -16,5 +16,7 @@ namespace eService.Services.Contracts
         void Delete(Order order);
 
         Order GetDbModel();
+
+        int GetAvailableOrderNumber();
     }
 }

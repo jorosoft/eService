@@ -1,9 +1,10 @@
+using System;
 using System.Data.Entity.Migrations;
+using System.IO;
 using System.Linq;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using eService.Data.Models;
-using eService.Data.Common;
 
 namespace eService.Data.Migrations
 {
@@ -56,15 +57,25 @@ namespace eService.Data.Migrations
 
         private void SeedData(MsSqlContext context)
         {
-            var towns = SeedList.Towns
-                .Select(x => new Town
-                {
-                    Name = x.ToUpper()
-                })
-                .ToArray();
+            //var towns = File.ReadAllText("./eService.Data/Common/towns.csv")
+            //    .Split(new string[] { "\r\n" }, StringSplitOptions.RemoveEmptyEntries)
+            //    .Select(x => new Town
+            //    {
+            //        Name = x
+            //    })
+            //    .ToArray();
 
-            context.Towns.AddOrUpdate(x => x.Name, towns);
-            
+            //var villages = File.ReadAllText("./eService.Data/Common/villages.csv")
+            //    .Split(new string[] { "\r\n" }, StringSplitOptions.RemoveEmptyEntries)
+            //    .Select(x => new Town
+            //    {
+            //        Name = x
+            //    })
+            //    .ToArray();
+
+            //context.Towns.AddOrUpdate(x => x.Name, towns);
+            //context.Towns.AddOrUpdate(x => x.Name, villages);
+
             context.Statuses.AddOrUpdate(
                 x => x.Name,
                 new Status { WorkFlowLevel = 0, Name = "Приет" },

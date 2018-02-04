@@ -15,6 +15,6 @@ namespace eService.Services.Contracts
 
         void Delete(Address address);
 
-        Address GetDbModel();
+        Address GetDbModel(string town, string street);
     }
 }

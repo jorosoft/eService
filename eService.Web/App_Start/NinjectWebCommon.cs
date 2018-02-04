@@ -10,6 +10,7 @@ namespace eService.Web.App_Start
 
     using Ninject;
     using Ninject.Extensions.Conventions;
+    using Ninject.Extensions.Factory;
     using Ninject.Web.Common;
     using Ninject.Web.Common.WebHost;
     using Services.Contracts;
@@ -85,6 +86,8 @@ namespace eService.Web.App_Start
             kernel.Bind(typeof(DbContext), typeof(MsSqlContext)).To<MsSqlContext>().InRequestScope();
             kernel.Bind(typeof(IEfRepository<>)).To(typeof(EfRepository<>));
             kernel.Bind<ISaveContext>().To<SaveContext>();
+
+            kernel.Bind<IDataServices>().ToFactory();
         }        
     }
 }

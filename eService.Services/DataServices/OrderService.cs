@@ -48,6 +48,16 @@ namespace eService.Services.DataServices
         {
             return new Order();
         }
+
+        public int GetAvailableOrderNumber()
+        {
+            var lastOrder = this.orderRepo
+                .AllAndDeleted
+                .OrderByDescending(x => x.Number)
+                .FirstOrDefault();
+
+            return lastOrder == null ? 1 : lastOrder.Number;
+        }
     }
 }
 

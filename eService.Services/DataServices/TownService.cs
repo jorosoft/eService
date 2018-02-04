@@ -44,9 +44,22 @@ namespace eService.Services.DataServices
             this.context.Commit();
         }
 
-        public Town GetDbModel()
+        public Town GetDbModel(string name)
         {
-            return new Town();
+            var town = this.townRepo.All
+                .FirstOrDefault(x => x.Name.ToLower() == name.ToLower());
+
+            if (town == null)
+            {
+                town = new Town
+                {
+                    Name = name
+                };
+
+                this.townRepo.Add(town);
+            }
+
+            return town;
         }
     }
 }

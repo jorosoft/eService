@@ -84,10 +84,10 @@
                         <form>
                             <label class="radio-inline">Вид на ремонта</label>
                             <label class="radio-inline">
-                                <input type="radio" name="ServiceType" checked>Гаранционен
+                                <input type="radio" name="IsWarrantyService" value="true" checked>Гаранционен
                             </label>
                             <label class="radio-inline">
-                                <input type="radio" name="ServiceType">Извънгаранционен
+                                <input type="radio" name="IsWarrantyService" value="false">Извънгаранционен
                             </label>
                         </form>
                     </div>
@@ -149,10 +149,10 @@
                         <form>
                             <label class="radio-inline">Приоритет</label>
                             <label class="radio-inline">
-                                <input type="radio" name="Priority" value="false" checked>Нормален
+                                <input type="radio" name="IsHighPriority" value="false" checked>Нормален
                             </label>
                             <label class="radio-inline">
-                                <input type="radio" name="Priority" value="true">Висок
+                                <input type="radio" name="IsHighPriority" value="true">Висок
                             </label>
                         </form>
                     </div>

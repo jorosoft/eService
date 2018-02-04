@@ -1,10 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace eService.Web.ViewModels.Orders
 {
     public class OrderViewModel
     {
+        public Guid? Id { get; set; }
+
         public int? Number { get; set; }
         
         public DateTime? Date { get; set; }
@@ -53,5 +56,7 @@ namespace eService.Web.ViewModels.Orders
         public string EmployeeName { get; set; }
 
         public string SupplierName { get; set; }
+
+        public List<string> Towns { get; set; }
     }
 }

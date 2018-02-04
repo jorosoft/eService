@@ -44,9 +44,22 @@ namespace eService.Services.DataServices
             this.context.Commit();
         }
 
-        public Street GetDbModel()
+        public Street GetDbModel(string name)
         {
-            return new Street();
+            var street = this.streetRepo.All
+                .FirstOrDefault(x => x.Name.ToLower() == name.ToLower());
+
+            if (street == null)
+            {
+                street = new Street
+                {
+                    Name = name
+                };
+
+                this.streetRepo.Add(street);
+            }
+
+            return street;
         }
     }
 }

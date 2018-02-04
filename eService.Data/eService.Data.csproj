@@ -57,12 +57,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Common\SeedList.cs" />
     <Compile Include="Contracts\IEfRepository.cs" />
     <Compile Include="Contracts\ISaveContext.cs" />
     <Compile Include="Migrations\201802031912388_Initial.cs" />
     <Compile Include="Migrations\201802031912388_Initial.Designer.cs">
       <DependentUpon>201802031912388_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802041412374_Refactor DB constraints.cs" />
+    <Compile Include="Migrations\201802041412374_Refactor DB constraints.Designer.cs">
+      <DependentUpon>201802041412374_Refactor DB constraints.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MsSqlContext.cs" />
@@ -72,6 +75,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Common\towns.csv" />
+    <None Include="Common\villages.csv" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -83,6 +88,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201802031912388_Initial.resx">
       <DependentUpon>201802031912388_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802041412374_Refactor DB constraints.resx">
+      <DependentUpon>201802041412374_Refactor DB constraints.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

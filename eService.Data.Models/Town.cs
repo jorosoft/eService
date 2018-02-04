@@ -10,7 +10,7 @@ namespace eService.Data.Models
         [Required]
         [Index(IsUnique = true)]
         [MinLength(3)]
-        [MaxLength(20)]
+        [MaxLength(30)]
         public string Name { get; set; }
     }
 }

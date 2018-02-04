@@ -8,11 +8,19 @@ namespace eService.Services.DataServices
     public class AddressService : IAddressService
     {
         private readonly IEfRepository<Address> addressRepo;
+        private readonly ITownService townService;
+        private readonly IStreetService streetService;
         private readonly ISaveContext context;
 
-        public AddressService(IEfRepository<Address> addressRepo, ISaveContext context)
+        public AddressService(
+            IEfRepository<Address> addressRepo,
+            ITownService townService,
+            IStreetService streetService,
+            ISaveContext context)
         {
             this.addressRepo = addressRepo;
+            this.townService = townService;
+            this.streetService = streetService;
             this.context = context;
         }
 
@@ -44,9 +52,12 @@ namespace eService.Services.DataServices
             this.context.Commit();
         }
 
-        public Address GetDbModel()
+        public Address GetDbModel(string town, string street)
         {
-            return new Address();
+            var townEntity = this.townService.GetDbModel(town);
+            var streetEntity = this.streetService.GetDbModel(street);
+
+            return new Address { Town = townEntity, Street = streetEntity};
         }
     }
 }
